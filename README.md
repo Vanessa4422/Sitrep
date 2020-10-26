@@ -1,4 +1,4 @@
-# Sitrep
+# Sitrep.html
 
 <!DOCTYPE html>
 <html>
