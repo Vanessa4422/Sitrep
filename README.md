@@ -58,12 +58,12 @@ height:500px;
     
 // adding json layer without json (not working)
 
-const mygeocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ','});
-    $.ajax ({
-      type:'GET',
-      dataType:'text',
-      url:'gcode-output.csv',
-      error: function() {
+     const mygeocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ','});
+     $.ajax ({
+     type:'GET',
+     dataType:'text',
+     url:'gcode-output.csv',
+     error: function() {
         alert('Data could not be loaded');},
 
     success: function(csv) {
