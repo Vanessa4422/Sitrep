@@ -53,8 +53,7 @@ height:500px;
         })
         .then(function(data){
         L.geoJSON(data).addTo(mymap);
-        
-    });    
+        });    
     
 // adding json layer without json (not working)
 
@@ -69,8 +68,8 @@ height:500px;
     success: function(csv) {
     mygeocsv.addData(csv);
     mymap.addLayer(mygeocsv);
-  }
-});
+    }
+    });
 
         
 //<!Creating my marker>
@@ -79,7 +78,7 @@ height:500px;
         iconUrl: 'my-icon.png',
         iconSize: [30, 30],
         iconAnchor: [25, 16]
-});
+        });
     const marker = L.marker([0, 0],{icon: Icon}).addTo(mymap);   
         
 //L.marker ([Latitude,longitude.addTo(myMap)])
@@ -87,8 +86,9 @@ height:500px;
     marker.setLatLng([latitude,longitude]);
 
         
-    </script>
     
+    
+</script>
 </body>
 </html>
  
