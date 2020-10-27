@@ -55,6 +55,23 @@ height:500px;
         L.geoJSON(data).addTo(mymap);
         
     });    
+    
+// adding json layer without json (not working)
+
+const mygeocsv = L.geoCsv (null, {firstLineTitles: true, fieldSeparator: ','});
+    $.ajax ({
+      type:'GET',
+      dataType:'text',
+      url:'gcode-output.csv',
+      error: function() {
+        alert('Data could not be loaded');},
+
+    success: function(csv) {
+    mygeocsv.addData(csv);
+    mymap.addLayer(mygeocsv);
+  }
+});
+
         
 //<!Creating my marker>
         
